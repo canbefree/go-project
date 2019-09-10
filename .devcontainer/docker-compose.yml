@@ -7,3 +7,8 @@ services:
     volumes:
       - ..:/workspace
     command: sleep infinity 
+    networks:
+      - app_net
+networks:
+    app_net:
+        external: true

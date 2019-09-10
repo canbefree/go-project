@@ -26,6 +26,7 @@
 		"ms-vscode.go"
 	],
 	"settings": {
-		"go.gopath": "/go"
+		"go.gopath": "/go:/workspace",
+		"go.testFlags": ["-count=1","-v"]
 	}
 }

@@ -1,1 +1,1 @@
-FROM registry.cn-shenzhen.aliyuncs.com/canbefree/docker-go:1.0.2
+FROM registry.cn-shenzhen.aliyuncs.com/canbefree/docker-go:1.0.5

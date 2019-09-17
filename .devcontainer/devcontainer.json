@@ -9,24 +9,28 @@
 	"runArgs": [
 		// Uncomment the next line to use a non-root user. See https://aka.ms/vscode-remote/containers/non-root-user.
 		// "-u", "1000",
-
-		"--cap-add=SYS_PTRACE", "--security-opt", "seccomp=unconfined"
+		"--cap-add=SYS_PTRACE",
+		"--security-opt",
+		"seccomp=unconfined"
 	],
-	
 	// Uncomment the next line if you want to publish any ports.
-	// "appPort": [],
-
+	"appPort": [
+		"8001:8001"
+	],
 	// Uncomment the next line to run commands after the container is created.
 	// "postCreateCommand": "go version",
-
 	// Uncomment the next line to use a non-root user. See https://aka.ms/vscode-remote/containers/non-root-user.
 	// "runArgs": [ "-u", "1000" ],
-
 	"extensions": [
 		"ms-vscode.go"
 	],
 	"settings": {
 		"go.gopath": "/go",
-		"go.testFlags": ["-count=1","-v"]
+		"go.testFlags": [
+			"-count=1",
+			"-v"
+		],
+		"go.docsTool": "gogetdoc",
+		"editor.formatOnSave": true
 	}
 }

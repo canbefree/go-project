@@ -1,20 +1,19 @@
 package main
 
 import (
-	"fmt"
+	"net/http"
+
+	"github.com/emicklei/go-restful"
+	// "github.com/emicklei/go-restful-swagger12"
 )
 
 func main() {
-	var i interface{} = 77
-	value, ok := i.(int)
-	if ok {
-		fmt.Printf("类型匹配int:%d\n", value)
-	} else {
-		fmt.Println("类型不匹配int\n")
-	}
-	if value, ok := i.(int); ok {
-		fmt.Println("类型匹配整型：%d\n", value)
-	} else if value, ok := i.(string); ok {
-		fmt.Printf("类型匹配字符串:%s\n", value)
-	}
+	ws := new(restful.WebService)
+	ws.Route(ws.GET("/").
+		Doc("get all users").
+		Writes("").
+		Returns(200, "OK", "ok"))
+
+	container := restful.NewContainer().Add(ws)
+	http.ListenAndServe(":8080", container)
 }

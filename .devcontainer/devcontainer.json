@@ -15,7 +15,7 @@
 	],
 	// Uncomment the next line if you want to publish any ports.
 	"appPort": [
-		"8001:8001"
+		"9200:8080"
 	],
 	// Uncomment the next line to run commands after the container is created.
 	// "postCreateCommand": "go version",

@@ -9,6 +9,8 @@ services:
     command: sleep infinity 
     networks:
       - app_net
+    ports:
+      - "9200:8080"
 networks:
     app_net:
         external: true
